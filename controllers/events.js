@@ -59,7 +59,6 @@ const deleteEvent = async (req = request, res = response) => {
 
 const getEvents = async (req = request, res = response) => {
   try {
-    console.log(req.uid);
     const events = await Event.find().populate('user', 'name');
 
     res.json({
